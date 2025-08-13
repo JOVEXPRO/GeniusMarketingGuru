@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Genius Marketing Guru — Jove Medi</title>
+  <meta name="description" content="Marketing genius. Brand architect. Funnel wizard. I build attention engines that convert." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E" />
+  <meta property="og:title" content="Genius Marketing Guru — Jove Medi" />
+  <meta property="og:description" content="I build attention engines that convert." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0ea5e9/ffffff.png&text=Genius+Marketing+Guru" />
+  <style>
+    :root {
+      --bg1: #0f172a; /* slate-900 */
+      --bg2: #020617; /* slate-950 */
+      --acc: #0ea5e9; /* sky-500 */
+      --acc2: #22c55e; /* green-500 */
+      --txt: #e5e7eb; /* gray-200 */
+      --muted: #94a3b8; /* slate-400 */
+      --card: #0b1222;
+    }
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--txt);
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(14,165,233,.15), transparent 60%),
+                  radial-gradient(900px 700px at 10% 110%, rgba(34,197,94,.10), transparent 60%),
+                  linear-gradient(180deg, var(--bg2), var(--bg1));
+    }
+    a { color: inherit; text-decoration: none }
+    .container { width: min(1100px, 92%); margin: 0 auto }
+    nav {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(2,6,23,.85), rgba(2,6,23,.6));
+      border-bottom: 1px solid rgba(148,163,184,.15);
+    }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; padding: 14px 0 }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px }
+    .brand .logo { width:36px; height:36px; border-radius:12px; background: conic-gradient(from 210deg, var(--acc), #38bdf8 20%, #818cf8 40%, #a78bfa 60%, #22c55e 80%, var(--acc)); display:grid; place-items:center; box-shadow: 0 8px 30px rgba(14,165,233,.35) }
+    .brand .logo span { font-size: 18px; font-weight:900; }
+    .nav-links { display:flex; gap:20px; font-size:14px; color: var(--muted) }
+    .btn { display:inline-block; padding: 12px 18px; border-radius: 14px; font-weight:700; border:1px solid rgba(148,163,184,.25); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); transition: transform .1s ease, box-shadow .2s ease }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(14,165,233,.25) }
+    .btn.primary { border-color: rgba(14,165,233,.4); background: linear-gradient(180deg, rgba(14,165,233,.25), rgba(14,165,233,.1)); color:white }
+    .tag { font-size:12px; padding:6px 10px; border:1px solid rgba(148,163,184,.25); color: var(--muted); border-radius:999px; display:inline-flex; align-items:center; gap:8px }
+
+    /* Hero */
+    .hero { padding: 80px 0 40px }
+    .grid-hero { display:grid; grid-template-columns: 1.2fr .8fr; gap: 36px; align-items:center }
+    .headline { font-size: clamp(34px, 5vw, 56px); line-height: 1.02; font-weight: 900; letter-spacing: -0.6px; margin: 8px 0 14px }
+    .headline .gradient { background: linear-gradient(90deg, #38bdf8, #a78bfa, #22c55e); -webkit-background-clip: text; background-clip: text; color: transparent }
+    .subhead { color: var(--muted); font-size: clamp(16px, 2vw, 18px); max-width: 60ch }
+    .kpis { margin-top: 22px; display:flex; gap:22px; flex-wrap:wrap }
+    .kpi { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(148,163,184,.18); border-radius: 16px; padding: 14px 16px; min-width: 160px }
+    .kpi b { font-size: 22px }
+    .hero-card { background: radial-gradient(200px 180px at 15% 10%, rgba(56,189,248,.25), transparent 60%), linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(148,163,184,.18); border-radius: 18px; padding: 18px }
+    .hero-card h3 { margin: 0 0 8px }
+    .check { display:flex; gap:10px; align-items:flex-start; margin: 10px 0; color: var(--txt) }
+
+    /* Sections */
+    section { padding: 64px 0; border-top: 1px solid rgba(148,163,184,.12) }
+    h2 { font-size: clamp(26px, 3.5vw, 36px); margin:0 0 20px }
+    .muted { color: var(--muted) }
+
+    /* Cards */
+    .grid3 { display:grid; grid-template-columns: repeat(3,1fr); gap: 18px }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(148,163,184,.18); border-radius: 16px; padding: 18px }
+
+    /* Portfolio */
+    .shots { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px }
+    .shot { aspect-ratio: 4/3; border-radius: 14px; background: #0a1020; border:1px solid rgba(148,163,184,.18); overflow:hidden; display:grid; place-items:center; font-weight:700; color:#94a3b8 }
+
+    /* CTA / Footer */
+    .cta { text-align:center; padding: 70px 0 }
+    footer { padding: 44px 0; color: var(--muted) }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .grid-hero { grid-template-columns: 1fr; }
+      .grid3 { grid-template-columns: 1fr; }
+      .shots { grid-template-columns: 1fr 1fr; }
+      nav .nav-links { display:none }
+    }
+
+    /* Tiny animation */
+    @keyframes pulseSoft { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-2px) } }
+    .floating { animation: pulseSoft 3s ease-in-out infinite }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jove Medi",
+      "brand": {
+        "@type": "Brand",
+        "name": "Genius Marketing Guru"
+      },
+      "url": "https://geniusmarketingguru.example",
+      "sameAs": [
+        "https://www.instagram.com/",
+        "https://www.facebook.com/",
+        "https://www.tiktok.com/"
+      ],
+      "jobTitle": "Marketing Strategist"
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <div class="logo floating"><span>GM</span></div>
+        <div>Genius Marketing Guru</div>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#proof">Proof</a>
+        <a href="#portfolio">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn primary" href="#contact">Book a Call</a>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="container grid-hero">
+      <div>
+        <span class="tag">🚀 Proven playbooks • ⚡ Quick wins • 📈 Long-term compounding</span>
+        <h1 class="headline">I build <span class="gradient">attention engines</span> that convert.</h1>
+        <p class="subhead">Brand design, video funnels, and ads engineered to stop thumbs, spike dopamine, and print revenue. You bring the product. I bring the machine.</p>
+        <div class="kpis">
+          <div class="kpi"><div class="muted">Average ROAS</div><b>4.7×</b></div>
+          <div class="kpi"><div class="muted">Clients served</div><b>120+</b></div>
+          <div class="kpi"><div class="muted">Fastest launch</div><b>72 hrs</b></div>
+        </div>
+        <div style="margin-top:22px; display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn primary" href="#contact">Get a growth plan</a>
+          <a class="btn" href="#portfolio">See work</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Signature Offer: <span style="color: var(--acc)">ATTENTION → ACTION</span></h3>
+        <div class="check">✅ Hook-driven UGC ads + vertical video system</div>
+        <div class="check">✅ High-velocity landing page with psychological triggers</div>
+        <div class="check">✅ Retargeting stack + email/SMS follow-up</div>
+        <div class="check">✅ Data dashboard & weekly iteration sprints</div>
+        <div style="margin-top:14px"><a class="btn" href="#services">What you get</a></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="services">
+    <div class="container">
+      <h2>Services built for speed and scale</h2>
+      <p class="muted">Pick one, or stack for compounding effects.</p>
+      <div class="grid3" style="margin-top:16px">
+        <div class="card">
+          <h3>Brand & Identity</h3>
+          <p class="muted">Name, voice, logo, and visual system that actually sells. Designed as modular building blocks, not one-off art.</p>
+          <ul>
+            <li>Positioning workshop</li>
+            <li>Logo + type system</li>
+            <li>Messaging guide</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Funnels & Websites</h3>
+          <p class="muted">Single-file, blazing-fast pages with elite UX and persuasion psychology baked in.</p>
+          <ul>
+            <li>Landing pages & lead magnets</li>
+            <li>Checkout flows</li>
+            <li>Analytics & heatmaps</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Paid Growth</h3>
+          <p class="muted">UGC ads, iterative testing, and retargeting that compounds learning.</p>
+          <ul>
+            <li>Meta, TikTok, YouTube</li>
+            <li>Creative vault & hooks</li>
+            <li>Weekly reports</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <div class="container">
+      <h2>Receipts & social proof</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>DMs & Testimonials</h3>
+          <p class="muted">“Tripled our leads in 14 days.” — R.M.</p>
+          <p class="muted">“Finally a brand we’re proud to show.” — W.B.</p>
+        </div>
+        <div class="card">
+          <h3>Case Highlights</h3>
+          <ul>
+            <li>Solar installs: CPL ↓ 41%</li>
+            <li>Insurance recruiting: 2.3× apps</li>
+            <li>CPG DTC: AOV ↑ 18%</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Badges</h3>
+          <p class="muted">Meta • TikTok • GA4 • HubSpot • Webflow</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <h2>Selected work</h2>
+      <div class="shots" aria-label="portfolio items">
+        <div class="shot">UGC Ad System</div>
+        <div class="shot">Solar Funnel</div>
+        <div class="shot">CPG Label</div>
+        <div class="shot">Insurance Lead Gen</div>
+        <div class="shot">Brand Identity</div>
+        <div class="shot">Email/SMS Automations</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Let’s build your attention engine</h2>
+      <p class="muted">Tell me your goal. I’ll reply with a 3-step plan.</p>
+      <form class="card" onsubmit="event.preventDefault(); this.reset(); alert('Thanks! I\'ll get back to you shortly.');">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px">
+          <label> Name<br /><input required type="text" placeholder="Your name" style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.3); background:#0a1020; color:var(--txt)"></label>
+          <label> Email<br /><input required type="email" placeholder="you@brand.com" style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.3); background:#0a1020; color:var(--txt)"></label>
+        </div>
+        <label style="display:block; margin-top:12px"> What do you want to achieve in the next 30 days?<br />
+          <textarea rows="5" placeholder="e.g., Book 30 solar consultations / Recruit 10 agents / Launch DTC label" style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.3); background:#0a1020; color:var(--txt)"></textarea>
+        </label>
+        <div style="display:flex; gap:10px; align-items:center; margin-top:14px">
+          <button class="btn primary" type="submit">Request plan</button>
+          <a class="btn" href="https://calendly.com/" target="_blank" rel="noopener">Or book a call</a>
+        </div>
+      </form>
+      <div style="display:flex; gap:12px; margin-top:14px">
+        <a class="tag" href="#">Instagram <span aria-hidden>↗</span></a>
+        <a class="tag" href="#">TikTok <span aria-hidden>↗</span></a>
+        <a class="tag" href="#">YouTube <span aria-hidden>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="container">
+      <h2>Ready to scale? I am.</h2>
+      <p class="muted">I’ll map your fastest path to ROI and handle the heavy lifting.</p>
+      <div style="margin-top:14px"><a class="btn primary" href="#contact">Send me your goal</a></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px">
+      <div>© <span id="year"></span> Genius Marketing Guru — Los Angeles, CA</div>
+      <div><a href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
